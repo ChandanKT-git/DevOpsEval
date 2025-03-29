@@ -17,10 +17,11 @@ pipeline{
         }
         stage('Deliver') {
             steps {        
-              script {
-              def output = bat(script: 'java -jar target/myapp-1.0-SNAPSHOT.jar', returnStdout: true).trim()
-               echo "Message from Java application: ${output}"
-            }
+    script {
+    def output = bat(script: 'java -jar "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Doit\\target\\myapp-1.0-SNAPSHOT.jar"', returnStdout: true).trim()
+    echo "Message from Java application: ${output}"
+}
+
 
         }
     }
