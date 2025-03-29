@@ -5,11 +5,6 @@ pipeline{
         jdk 'jdk'
     }
     stages {
-        stage{
-            steps{
-                echo 'Hello World!'
-            }
-        }
         stage('Build') {
             steps {
                 bat 'mvn -B -DskipTests clean package'
@@ -29,5 +24,4 @@ pipeline{
             }
         }
     }
-
 }
